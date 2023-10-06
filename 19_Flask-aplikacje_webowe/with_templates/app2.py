@@ -4,8 +4,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
+n=1
 
 @app.route('/')
 def hello():
-    return render_template('index_param.html', title="To jest tytul z parametru")
+    return render_template('index_param.html', title="Moj tytuł")

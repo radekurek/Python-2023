@@ -24,6 +24,7 @@ def add():
     return render_template('select.html', data=data, tytul="Dodano pozycję do listy")
 
 
+
 @app.route('/remove', methods=['POST'])
 def remove():
     global data

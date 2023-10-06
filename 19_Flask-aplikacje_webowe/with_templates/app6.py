@@ -9,7 +9,8 @@ data = []
 
 @app.route('/')
 def hello():
-    return render_template('form.html', data=data, tytul="To jest tytul z parametru")
+    name="world"
+    return render_template('form.html', name='', tytul="To jest tytul z parametru")
 
 
 @app.route('/add')
