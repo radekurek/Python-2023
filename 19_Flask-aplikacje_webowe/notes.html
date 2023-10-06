@@ -1,0 +1,25 @@
+</style>
+</head>
+<body>
+<h1>Przykład z SQL Alchemy</h1>
+{% if no_error %}ok
+<h2>{{ tytul }}</h2>
+{% else %}
+<h2 style="color: red">{{ tytul }}</h2>
+{% endif %}
+
+<form action="/addtag">
+    <label for="name">Tag:</label>
+    <input type="text" id="name" name="name" value="Tag"><br>
+    <input class="button button1" type="submit" value="Dodaj !">
+</form>
+<ul>
+    {% for item in data %}
+    <li> {{item}} <a href="/removetag?name={{item.tagname}}">X</a> </li>
+    {% else %}
+    no items
+    {% endfor %}
+</ul>
+
+</body>
+</html>
